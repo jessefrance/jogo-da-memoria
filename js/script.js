@@ -92,8 +92,8 @@ function checkForMatch(){
     const optionTwoId = cardsChosenId[1]
     if (cardsChosen[0] === cardsChosen[1]) {
         alert('Parábens, você achou o par!')
-        cards[optionOneId].setAttribute('src',)
-    }
+        cards[optionOneId].setAttribute('src', '.images/super-nintendo.png')
+    }   cards[optionTwoId].setAttribute('src', '.images/super-nintendo.png')
 }
 
 // flip you card
