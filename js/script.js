@@ -70,8 +70,41 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 })
 
+// Criação de Placa //
 const grid = document.querySelector('.grid')
+var cardsChosen = []
+var cardsChosenId = []
 
 function creatBoard() {
-    for(let i = 0; i < cardArray)
+    for(let i = 0; i < cardArray.length; i++) {
+        var card = document.createElement('img')
+        card.setAttribute('src', '.images/mBox_360.png')
+        card.setAttribute('data-id', i)
+        // card.addEventListener('click', flipCard)
+        grid.appendChild(card)
+    }
 }
+
+// check for matches
+function checkForMatch(){
+    var cards = document.querySelectorAll('img')
+    const optionOneId = cardsChosenId[0]
+    const optionTwoId = cardsChosenId[1]
+    if (cardsChosen[0] === cardsChosen[1]) {
+        alert('Parábens, você achou o par!')
+        cards[optionOneId].setAttribute('src',)
+    }
+}
+
+// flip you card
+function flipCard() {
+   var cardId = this.getAttribute ('data-id')
+   cardsChosen.push(cardArray[cardId].name)
+   cardsChosenId.push(cardId)
+   this.setAttribute('src', cardArray[cardId].img)
+   if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch, 500)
+   }
+}
+
+creatBoard()
