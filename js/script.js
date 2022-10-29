@@ -69,3 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ]
 })
+
+const grid = document.querySelector('.grid')
+
+function creatBoard() {
+    for(let i = 0; i < cardArray)
+}
